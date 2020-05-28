@@ -9,19 +9,25 @@
         <title>Note Cards</title>
     </head>
     <body>
-        <header><button class="button button1">Create Note</button></header>
+        <header>
+            <button class="button button1" id="newNoteButton">
+                New Note
+            </button>
+        </header>
         <section>
             <div class="a1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Blanditiis saepe similique libero ullam sunt reprehenderit
                 beatae dolorum officia iusto? Animi alias itaque deserunt
-                officiis cum non eum veniam earum quam?
+                officiis cum non eum veniam earum quam? Test1
+                <br /><br /><button class="button button2">Delete</button>
             </div>
             <div class="a2">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Obcaecati veritatis sunt sequi repellendus dolores aspernatur
                 totam adipisci, laborum quidem maxime, voluptatum maiores quam
                 animi fugiat eveniet perferendis dolor non accusantium!
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a3">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -29,43 +35,70 @@
                 Repudiandae doloribus, incidunt necessitatibus exercitationem
                 voluptatum beatae distinctio neque provident maiores voluptates
                 nihil.
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequuntur obcaecati est dignissimos magnam asperiores eum
                 laudantium eaque labore repudiandae veritatis eos sit molestias
                 aliquid facilis voluptatem nam voluptate, adipisci debitis!
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
                 voluptatibus sapiente quod minus temporibus similique dicta
                 impedit quo! Magni voluptatibus expedita esse labore? Omnis eos
                 ad laborum quaerat, quidem animi.
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
                 deleniti provident id, dolorem dolores, iusto facere suscipit
                 voluptates praesentium labore doloremque, est sunt aliquam.
                 Dolor natus dolorem non quis nam!
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a7">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
                 mollitia sunt ex possimus officiis velit aut ratione voluptate
                 soluta natus porro dolore, obcaecati facere. Possimus non nisi
                 nobis eum blanditiis?
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                 tempore harum dolorum odit consectetur, enim praesentium
                 repellendus explicabo a non recusandae, officiis deserunt
                 aliquid quisquam earum maxime culpa! Corporis, facere.
+                <br /><button class="button button2">Delete</button>
             </div>
             <div class="a9">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
                 accusamus? Rem possimus expedita assumenda, voluptatem fuga ut
                 laboriosam pariatur ex, nemo corporis sunt. Et, iure rerum. Esse
                 ea aliquid modi.
+                <br /><button class="button button2">Delete</button>
             </div>
         </section>
+
+        <!-- --------------------Modal-------------------- -->
+        <div class="modal" id="bottomModalDiv">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <textarea></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="button button1" id="createNoteButton">
+                        Create Note
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------Modal-------------------- -->
+
+        <script src="app.js"></script>
     </body>
 </html>
