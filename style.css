@@ -5,18 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
-    color: black;
+    color: var(--col-font-dark);
 }
 
 body {
     /* --------------------Colors-------------------- */
+    --col-font-dark: #505050;
     --col-note: #f4f1bb;
     --col-note-darker: #bab31e;
-    --col-delete: #ed6a5a;
-    --col-add: #5ca4a9;
+    --col-remove: #ed6a5a;
+    --col-create: #5ca4a9;
     --col-bg: #e6ebe0;
     --col-bg2: #9bc1bc;
-    /* --------------------Colors-------------------- */
+    /* ---------------------------------------- */
 }
 
 /* --------------------Structure-------------------- */
@@ -38,7 +39,6 @@ section {
 }
 
 section > div {
-    position: relative;
     flex-basis: 100%;
     padding: 8%;
     margin-bottom: 4%;
@@ -46,7 +46,6 @@ section > div {
     border-radius: 0.5em;
     background-color: var(--col-note);
 }
-/* --------------------Structure-------------------- */
 
 textarea {
     width: 100%;
@@ -54,17 +53,18 @@ textarea {
     font-size: 1em;
     resize: none;
     background-color: var(--col-bg);
-    border: 0.1em solid var(--col-add);
+    border: 0.1em solid var(--col-create);
     border-radius: 0.5em;
 }
 
 div span {
     float: right;
-    color: var(--col-delete);
+    color: var(--col-remove);
     cursor: pointer;
     font-size: 2em;
     font-weight: bold;
 }
+/* ---------------------------------------- */
 
 /* --------------------Buttons-------------------- */
 .button {
@@ -74,33 +74,19 @@ div span {
     cursor: pointer;
 }
 
-.button1 {
+.buttonCreate {
     display: inline-block;
-    color: var(--col-add);
+    color: var(--col-create);
     background-color: var(--col-bg);
-    border: 0.1em solid var(--col-add);
+    border: 0.1em solid var(--col-create);
     border-radius: 0.5em;
 }
 
-.button1:hover {
+.buttonCreate:hover {
     color: var(--col-bg);
-    background-color: var(--col-add);
+    background-color: var(--col-create);
 }
-
-.button2 {
-    display: block;
-    float: right;
-    color: var(--col-delete);
-    background-color: var(--col-bg);
-    border: 0.1em solid var(--col-delete);
-    border-radius: 0.5em;
-}
-
-.button2:hover {
-    color: var(--col-bg);
-    background-color: var(--col-delete);
-}
-/* --------------------Buttons-------------------- */
+/* ---------------------------------------- */
 
 /* --------------------Modal-------------------- */
 .modal {
@@ -152,7 +138,7 @@ div span {
         opacity: 1;
     }
 }
-/* --------------------Modal-------------------- */
+/* ---------------------------------------- */
 
 /* --------------------Media Queries-------------------- */
 /* Small devices (landscape phones, 576px and up)
@@ -162,11 +148,12 @@ div span {
 @media (min-width: 768px) {
     section > div {
         flex-basis: 46%;
-        max-height: 45vh;
-        overflow: auto;
         padding: 4%;
         margin-left: 2%;
         margin-right: 2%;
+        margin-bottom: 4%;
+        max-height: 45vh;
+        overflow: auto;
     }
 }
 
@@ -185,9 +172,10 @@ div span {
 @media (min-width: 1200px) {
     section > div {
         flex-basis: 24%;
+        padding: 1%;
         margin-left: 0.5%;
         margin-right: 0.5%;
         margin-bottom: 1%;
     }
 }
-/* --------------------Media Queries-------------------- */
+/* ---------------------------------------- */
