@@ -10,12 +10,12 @@
 
 body {
     /* --------------------Colors-------------------- */
-    --fire-opal: #ed6a5a;
-    --pale-spring-bud: #f4f1bb;
-    --pale-spring-bud-darker: #bab31e;
-    --opal: #9bc1bc;
-    --cadet-blue: #5ca4a9;
-    --alabaster: #e6ebe0;
+    --col-note: #f4f1bb;
+    --col-note-darker: #bab31e;
+    --col-delete: #ed6a5a;
+    --col-add: #5ca4a9;
+    --col-bg: #e6ebe0;
+    --col-bg2: #9bc1bc;
     /* --------------------Colors-------------------- */
 }
 
@@ -26,7 +26,7 @@ header {
     z-index: 10;
     text-align: center;
     line-height: 10vh;
-    background-color: var(--opal);
+    background-color: var(--col-bg2);
 }
 
 section {
@@ -34,7 +34,7 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     min-height: 90vh;
-    background-color: var(--alabaster);
+    background-color: var(--col-bg);
 }
 
 section > div {
@@ -42,55 +42,63 @@ section > div {
     flex-basis: 100%;
     padding: 8%;
     margin-bottom: 4%;
-    border: 0.1em solid var(--pale-spring-bud-darker);
+    border: 0.1em solid var(--col-note-darker);
     border-radius: 0.5em;
-    background-color: var(--pale-spring-bud);
+    background-color: var(--col-note);
 }
 /* --------------------Structure-------------------- */
 
 textarea {
     width: 100%;
     padding: 1em;
-    font-size: 16px;
+    font-size: 1em;
     resize: none;
-    background-color: var(--alabaster);
-    border: 0.1em solid var(--cadet-blue);
+    background-color: var(--col-bg);
+    border: 0.1em solid var(--col-add);
     border-radius: 0.5em;
+}
+
+div span {
+    float: right;
+    color: var(--col-delete);
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 /* --------------------Buttons-------------------- */
 .button {
     padding: 1em 2em;
-    font-size: 16px;
+    font-size: 1em;
     transition-duration: 0.5s;
     cursor: pointer;
 }
 
 .button1 {
     display: inline-block;
-    color: var(--cadet-blue);
-    background-color: var(--alabaster);
-    border: 0.1em solid var(--cadet-blue);
+    color: var(--col-add);
+    background-color: var(--col-bg);
+    border: 0.1em solid var(--col-add);
     border-radius: 0.5em;
 }
 
 .button1:hover {
-    color: var(--alabaster);
-    background-color: var(--cadet-blue);
+    color: var(--col-bg);
+    background-color: var(--col-add);
 }
 
 .button2 {
     display: block;
     float: right;
-    color: var(--fire-opal);
-    background-color: var(--alabaster);
-    border: 0.1em solid var(--fire-opal);
+    color: var(--col-delete);
+    background-color: var(--col-bg);
+    border: 0.1em solid var(--col-delete);
     border-radius: 0.5em;
 }
 
 .button2:hover {
-    color: var(--alabaster);
-    background-color: var(--fire-opal);
+    color: var(--col-bg);
+    background-color: var(--col-delete);
 }
 /* --------------------Buttons-------------------- */
 
@@ -112,18 +120,11 @@ textarea {
 .modal-content {
     position: fixed;
     bottom: 0;
-    background-color: var(--opal);
+    background-color: var(--col-bg2);
     width: 100%;
     padding: 0.5em;
     animation-name: slideIn;
     animation-duration: 0.5s;
-}
-
-.close {
-    color: var(--alabaster);
-    float: right;
-    font-size: 2em;
-    font-weight: bold;
 }
 
 .close:hover,
