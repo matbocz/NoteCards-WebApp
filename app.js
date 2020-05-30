@@ -30,3 +30,46 @@ window.addEventListener("click", (e) => {
     }
 });
 /* ---------------------------------------- */
+
+/* --------------------Create note-------------------- */
+const createNote = () => {
+    const noteText = textarea.value;
+
+    if (noteText === "") alert("You must enter the note!");
+    else {
+        const note = document.createElement("div");
+
+        note.className = "note";
+        note.innerHTML = "<span>&times;</span><br /><br />" + noteText;
+        note.querySelector("span").addEventListener("click", removeNote);
+
+        noteList.push(note);
+        renderList();
+
+        clearElement(textarea);
+        hideElement(bottomModalDiv);
+    }
+};
+
+createNoteButton.addEventListener("click", createNote);
+/* ---------------------------------------- */
+
+/* --------------------Remove note-------------------- */
+const removeNote = (e) => {
+    // e.target.parentNode.remove();
+    const noteKey = e.target.parentNode.dataset.key;
+
+    noteList.splice(noteKey, 1);
+    renderList();
+};
+/* ---------------------------------------- */
+
+/* --------------------Render note list-------------------- */
+const renderList = () => {
+    section.innerHTML = ""; // clear section
+    noteList.forEach((note, key) => {
+        note.dataset.key = key; // set the correct key for each note (the same as in array)
+        section.appendChild(note); // add notes to section
+    });
+};
+/* ---------------------------------------- */
