@@ -73,3 +73,19 @@ const renderList = () => {
     });
 };
 /* ---------------------------------------- */
+
+/* --------------------Search note-------------------- */
+const searchNote = (e) => {
+    const searchText = e.target.value.toLowerCase();
+    let searchedNotes = [];
+
+    searchedNotes = noteList.filter((note) =>
+        note.textContent.toLowerCase().includes(searchText)
+    );
+
+    section.innerHTML = ""; // clear section
+    searchedNotes.forEach((note) => section.appendChild(note)); // add searched notes to section
+};
+
+input.addEventListener("input", searchNote);
+/* ---------------------------------------- */
