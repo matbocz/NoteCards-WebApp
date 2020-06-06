@@ -1,10 +1,10 @@
 # NoteCards-WebApp
- 
+A simple app to manage your notes. Uses Flexbox.
+
 ## Features
-- you can add new notes,
+- you can add and remove notes
 ![Adnotacja 2020-06-06 212737](https://user-images.githubusercontent.com/34821903/83952953-ee6f5800-a83c-11ea-8161-9b38bbdc13e9.png)
-- you can remove notes,
-- you can search for notes,
+- you can search for notes
 ![Adnotacja 2020-06-06 212813](https://user-images.githubusercontent.com/34821903/83952967-02b35500-a83d-11ea-9e26-0dd403dd3069.png)
 - is responsive
 ![Adnotacja 2020-06-06 212602](https://user-images.githubusercontent.com/34821903/83952999-342c2080-a83d-11ea-994a-8ecf38f17d77.png)
