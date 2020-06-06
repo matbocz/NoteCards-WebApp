@@ -19,7 +19,7 @@ const showElement = function (element) {
 const clearElement = function (element) {
     element.value = "";
 };
-/* ---------------------------------------- */
+/* --------------------/ Basic-------------------- */
 
 /* --------------------Modal-------------------- */
 newNoteButton.addEventListener("click", () => showElement(bottomModalDiv));
@@ -29,7 +29,7 @@ window.addEventListener("click", (e) => {
         hideElement(bottomModalDiv);
     }
 });
-/* ---------------------------------------- */
+/* --------------------/ Modal-------------------- */
 
 /* --------------------Create note-------------------- */
 const createNote = () => {
@@ -52,7 +52,7 @@ const createNote = () => {
 };
 
 createNoteButton.addEventListener("click", createNote);
-/* ---------------------------------------- */
+/* --------------------/ Create note-------------------- */
 
 /* --------------------Remove note-------------------- */
 const removeNote = (e) => {
@@ -62,7 +62,7 @@ const removeNote = (e) => {
     noteList.splice(noteKey, 1);
     renderList();
 };
-/* ---------------------------------------- */
+/* --------------------/ Remove note-------------------- */
 
 /* --------------------Render note list-------------------- */
 const renderList = () => {
@@ -72,7 +72,7 @@ const renderList = () => {
         section.appendChild(note); // add notes to section
     });
 };
-/* ---------------------------------------- */
+/* --------------------/ Render note list-------------------- */
 
 /* --------------------Search note-------------------- */
 const searchNote = (e) => {
@@ -88,4 +88,4 @@ const searchNote = (e) => {
 };
 
 input.addEventListener("input", searchNote);
-/* ---------------------------------------- */
+/* --------------------/ Search note-------------------- */
