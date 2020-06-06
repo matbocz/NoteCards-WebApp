@@ -1,5 +1,5 @@
 # NoteCards-WebApp
-A simple app to manage your notes. Uses Flexbox.
+JS and Flexbox WebApp. This app allows you to manage your notes.
 
 ## Features
 - you can add and remove notes
